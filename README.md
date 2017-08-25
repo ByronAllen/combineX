@@ -9,4 +9,4 @@ brew install pip # This may break if you do not have brew, but many Macs have it
 pip install pandas # The combineX program requires this
 python run.py # Follow the prompts 
 
-All your CSVs have to be the same length and have to have a column ‘x’. 
+All your CSVs have to be the same length and have to have a column that you designate. 
