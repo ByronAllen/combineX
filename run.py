@@ -16,12 +16,12 @@ csvs=[csv for csv in os.listdir(directory) if csv.endswith('.csv') == True]
 length_of_dataset=pd.read_csv(directory + '/' + csvs[0]).shape[0]
 df=pd.DataFrame(index=range(length_of_dataset))
 
-# Iterate through designated folder and combine the 'x' field in each CSV
+# Iterate through designated folder and combine the 'y' field in each CSV
 for csv in csvs:
     file_path = directory + '/' + csv
-    new_df=pd.read_csv(file_path, index_col=0)[['x']]
-    new_df[csv.split('.')[0]]=new_df.x
-    new_df.drop(labels='x', inplace=True, axis=1)
+    new_df=pd.read_csv(file_path, index_col=0)[['y']]
+    new_df[csv.split('.')[0]]=new_df.y
+    new_df.drop(labels='y', inplace=True, axis=1)
     df=df.merge(new_df, left_index=True, right_index=True)
 
 # Save 'combineX' table as csv
