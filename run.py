@@ -20,7 +20,7 @@ df=pd.DataFrame(index=range(length_of_dataset))
 # Iterate through designated folder and combine the column_name field in each CSV
 for csv in csvs:
     file_path = directory + '/' + csv
-    new_df=pd.read_csv(file_path, index_col=0)[[column_name]]
+    new_df=pd.read_csv(file_path)[[column_name]]
     new_df[csv.split('.')[0]]=new_df[column_name]
     new_df.drop(labels=column_name, inplace=True, axis=1)
     df=df.merge(new_df, left_index=True, right_index=True)
