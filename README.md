@@ -10,3 +10,34 @@ pip install pandas # The combineX program requires this
 python run.py # Follow the prompts 
 
 All your CSVs have to be the same length and have to have a column that you designate. 
+
+
+### Detailed Instructions
+
+PREREQ
+Command + Space bar + type 'Terminal' 
+Execute commands 
+	- sudo easy_install pip
+	- sudo pip install -U pip
+	- sudo pip install pandas
+
+DOWNLOAD combineX
+Go to https://github.com/ByronAllen/combineX
+Click on the 'Clone or Download' button >> select download zip option
+Move zip to Desktop
+Unzip
+
+DATA FOLDER
+Create new folder (aka project folder) in combineX to store data (e.g. move data folder into combineX)
+Remove spaces from the folder name
+Create output folder in project folder
+
+RUN PROGRAM
+Command + Space bar + type 'Terminal' 
+Execute commands 
+	- cd ~/Desktop/combineX-master/
+ 	- python run.py
+		- Enter the path to your data folder (path to project folder would be './project')
+		- Name the path to the output folder (e.g. './project/output')
+		- Create a file name
+		- Pick which column to combine
